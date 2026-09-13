@@ -20,6 +20,119 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 5\nApplication Tier <-> Data Tier",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 5\nApplication Tier <-> Data Tier"
+            ],
+            "id": "4a1f0f76-e749-4d8b-8488-d3a4ff07c56a",
+            "source": {
+              "x": 30,
+              "y": 730
+            },
+            "target": {
+              "x": 1720,
+              "y": 730
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 3\nApplication Tier <-> Email Gateway",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 3\nApplication Tier <-> Email Gateway"
+            ],
+            "id": "79031dd5-1596-4f0e-974c-e469b26c720c",
+            "source": {
+              "x": 680,
+              "y": 520
+            },
+            "target": {
+              "x": 1010,
+              "y": 520
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 2\nApplication Tier <-> Payment Gateway",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 2\nApplication Tier <-> Payment Gateway"
+            ],
+            "id": "19b7dbb4-1abe-4b31-a78f-bf0c2dd91c04",
+            "source": {
+              "x": 1020,
+              "y": 520
+            },
+            "target": {
+              "x": 1380,
+              "y": 520
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 1\nPublic Internet <-> CartCo Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 1\nPublic Internet <-> CartCo Application"
+            ],
+            "id": "0dfd4c81-b31b-4aca-9103-51ab220533b6",
+            "source": {
+              "x": 31,
+              "y": 196
+            },
+            "target": {
+              "x": 1670,
+              "y": 190
+            }
+          },
+          {
             "position": {
               "x": 166.24999999999972,
               "y": 70.00000000000038
@@ -379,8 +492,8 @@
           },
           {
             "position": {
-              "x": 46.25,
-              "y": 608
+              "x": 46.249999999999716,
+              "y": 838
             },
             "size": {
               "width": 120,
@@ -627,8 +740,8 @@
           },
           {
             "position": {
-              "x": 279,
-              "y": 608
+              "x": 276.2499999999997,
+              "y": 838
             },
             "size": {
               "width": 120,
@@ -1432,8 +1545,8 @@
             },
             "vertices": [
               {
-                "x": 1010,
-                "y": 380
+                "x": 1048.75,
+                "y": 390
               }
             ]
           },
@@ -1484,8 +1597,8 @@
             },
             "vertices": [
               {
-                "x": 1220,
-                "y": 380
+                "x": 1190,
+                "y": 360
               }
             ]
           },
@@ -2024,7 +2137,7 @@
           {
             "position": {
               "x": 547,
-              "y": 608
+              "y": 838
             },
             "size": {
               "width": 120,
@@ -2147,7 +2260,7 @@
           },
           {
             "position": {
-              "x": 853,
+              "x": 800.75,
               "y": 434.00000000000017
             },
             "size": {
@@ -2267,7 +2380,7 @@
           },
           {
             "position": {
-              "x": 827,
+              "x": 774.5,
               "y": 608
             },
             "size": {
@@ -2403,6 +2516,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2486,7 +2600,6 @@
               ]
             },
             "id": "c0b2d6f8-d6ab-44fd-9a26-65bfd738528d",
-            "zIndex": 16,
             "data": {
               "type": "tm.Process",
               "name": "Process payment",
@@ -2504,8 +2617,8 @@
           },
           {
             "position": {
-              "x": 1044,
-              "y": 434
+              "x": 1048.75,
+              "y": 608
             },
             "size": {
               "width": 112.5,
@@ -2523,6 +2636,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2606,7 +2720,6 @@
               ]
             },
             "id": "474b60b8-45ca-4258-bd22-e6e6b3b9fb26",
-            "zIndex": 17,
             "data": {
               "type": "tm.Actor",
               "name": "Payment Gateway",
@@ -2640,6 +2753,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2723,7 +2837,6 @@
               ]
             },
             "id": "c5d0581c-8eb6-4a5e-828b-b7fb42c1101c",
-            "zIndex": 18,
             "data": {
               "type": "tm.Process",
               "name": "Admin Order Management",
@@ -2763,6 +2876,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -2846,7 +2960,6 @@
               ]
             },
             "id": "1ca7cff4-2a89-495e-b8c9-e84582664f86",
-            "zIndex": 19,
             "data": {
               "type": "tm.Store",
               "name": "Orders DB",
@@ -2866,7 +2979,7 @@
           {
             "position": {
               "x": 1464,
-              "y": 608
+              "y": 838
             },
             "size": {
               "width": 120,
@@ -2887,6 +3000,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -2970,7 +3084,6 @@
               ]
             },
             "id": "b9db7860-57dc-4347-a7a7-023578058604",
-            "zIndex": 20,
             "data": {
               "type": "tm.Store",
               "name": "Orders DB",
@@ -3008,6 +3121,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -3091,7 +3205,6 @@
               ]
             },
             "id": "457f26f1-35b6-47f1-af08-64ccec289a5c",
-            "zIndex": 21,
             "data": {
               "type": "tm.Actor",
               "name": "Admin",
@@ -3102,6 +3215,34 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary 4\nCustomer Role <-> Admin Role",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary 4\nCustomer Role <-> Admin Role"
+            ],
+            "id": "c50bf314-55b2-4f18-baf1-d38826997aa5",
+            "source": {
+              "x": 50,
+              "y": 40
+            },
+            "target": {
+              "x": 1690,
+              "y": 40
             }
           }
         ],
