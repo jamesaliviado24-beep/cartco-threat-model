@@ -1,0 +1,29 @@
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-09-13",
+  "summary": {
+    "title": "CartCo E-Commerce Checkout Threat Model",
+    "owner": "James Aliviado",
+    "description": "Threat model for the CartCo e-commerce checkout system, focusing on data flows, trust boundaries, and security threats using the STRIDE methodology.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "CartCo Checkout DFD",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [],
+        "description": "Data Flow Diagram for the CartCo e-commerce checkout system, including trust boundaries and data flows."
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Mr. Ahdzleebee L. Formentera",
+    "threatTop": 0
+  }
+}
