@@ -1709,7 +1709,7 @@
               "threats": [
                 {
                   "id": "85e472ee-1e5e-4eaa-b6d9-99cee314b53b",
-                  "title": "New STRIDE threat",
+                  "title": "Interception of Administrative Login Tokens (TB1/TB4)",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Information disclosure",
@@ -1724,7 +1724,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -2005,7 +2005,7 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "An attacker submits concurrent checkout requests to the Checkout Service, causing a race condition that applies discount codes multiple times or duplicates order fulfillment.Provide a description for this threat",
+                  "description": "An attacker submits concurrent checkout requests to the Checkout Service, causing a race condition that applies discount codes multiple times or duplicates order fulfillment.",
                   "mitigation": "Implement atomic database operations, lock cart state during checkout, and enforce unique request idempotency keys.",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2015,12 +2015,19 @@
               ],
               "threatFrequency": {
                 "spoofing": 1,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
