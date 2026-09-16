@@ -1525,8 +1525,8 @@
                 "text": " Checkout Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1623,12 +1623,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5532e165-d54d-4f26-9358-997def495407",
+                  "title": "Checkout Race Condition & Double-Discounting",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker submits concurrent checkout requests to the Checkout Service, causing a race condition that applies discount codes multiple times or duplicates order fulfillment.Provide a description for this threat",
+                  "mitigation": "Implement atomic database operations, lock cart state during checkout, and enforce unique request idempotency keys.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8.0"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1645,8 +1667,8 @@
                 "text": "Update Inventory"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1743,12 +1765,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "53277dc5-f89a-4698-b63f-4e7994e70431",
+                  "title": "Inventory Stock Count Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Parallel requests to the Update Inventory process cause stock depletion values to become negative or miscalculated, creating stock allocation errors.",
+                  "mitigation": "Utilize atomic SQL queries with row-level locks on product inventory tables.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "6.5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1995,16 +2039,16 @@
               "threats": [
                 {
                   "id": "349560a3-3e8e-4435-b3d6-154da2042f52",
-                  "title": "Email Gateway Flooding via Order Trigger",
+                  "title": "Email Worker Denial of Service (DoS)",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Denial of service",
-                  "description": "An attacker repeatedly triggers order confirmation requests to exhaust the outgoing mail queue, causing confirmation delays for legitimate customers.",
-                  "mitigation": "mplement background task queues with per-user rate limiting and asynchronous processing.",
+                  "description": "An attacker generates thousands of rapid dummy order events, overwhelming the Send Order Confirmation process and delaying legitimate customer notification receipts.",
+                  "mitigation": "Decouple confirmation generation into asynchronous message queues (RabbitMQ/SQS) with strict per-user message rates.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
-                  "score": "6.5"
+                  "score": "6.0"
                 }
               ],
               "threatFrequency": {
@@ -2012,7 +2056,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -2820,6 +2864,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Mr. Ahdzleebee L. Formentera",
-    "threatTop": 13
+    "threatTop": 15
   }
 }
